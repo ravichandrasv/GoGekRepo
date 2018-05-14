@@ -32,17 +32,11 @@ public class WeatherRequest extends BaseRequest {
         mListener = listener;
         mContext = context;
 
-        mBody = new HashMap<>();
-        mBody.put("id", id);
-
-        /*mBody.put("source", "android");
-        mBody.put("source_token", deviceRegistrationToken );*/
     }
 
 
 
     public void execute() {
-
         mListener.onStart(mApiRequestcode);
         super.execute();
     }

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GoGekWeather</string>
+
+    <string name="something">Something went wrong at our end!</string>
+    <string name="retry">Retry</string>
+    <string name="error_message">Something went wrong at our end!</string>
 </resources>

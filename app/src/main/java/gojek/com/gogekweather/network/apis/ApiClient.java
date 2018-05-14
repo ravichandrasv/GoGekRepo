@@ -24,17 +24,6 @@ public class ApiClient {
     public ApiClient(Context context) {
         try {
 
-          /*  OkHttpClient.Builder okHttpClientBuilder = getClientBuilder();
-            okHttpClientBuilder.addInterceptor(new APIRequestInterceptor(context));
-
-            HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor();
-
-
-            loggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-
-            okHttpClientBuilder.addInterceptor(loggingInterceptor)
-                    .readTimeout(ApiConstant.MAX_TIMEOUT_DURATION, TimeUnit.MILLISECONDS);*/
-
             HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
 // set your desired log level
             logging.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -61,49 +50,6 @@ public class ApiClient {
         }
     }
 
-    private OkHttpClient.Builder getClientBuilder() {
-
-        try {
-            // Create a trust manager that does not validate certificate chains
-            final TrustManager[] trustAllCerts = new TrustManager[]{
-                    new X509TrustManager() {
-                        @Override
-                        public void checkClientTrusted(java.security.cert.X509Certificate[] chain, String authType) {
-                        }
-
-                        @Override
-                        public void checkServerTrusted(java.security.cert.X509Certificate[] chain, String authType) {
-                        }
-
-                        @Override
-                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
-                            return new java.security.cert.X509Certificate[]{};
-                        }
-                    }
-            };
-
-            // Install the all-trusting trust manager
-            final SSLContext sslContext = SSLContext.getInstance("SSL");
-            sslContext.init(null, trustAllCerts, new java.security.SecureRandom());
-            // Create an ssl socket factory with our all-trusting manager
-            final SSLSocketFactory sslSocketFactory = sslContext.getSocketFactory();
-
-            OkHttpClient.Builder builder = new OkHttpClient.Builder();
-            builder.sslSocketFactory(sslSocketFactory);
-            builder.hostnameVerifier(new HostnameVerifier() {
-                @Override
-                public boolean verify(String hostname, SSLSession session) {
-                    return true;
-                }
-            });
-
-            return builder;
-        } catch (NoSuchAlgorithmException e) {
-            return new OkHttpClient.Builder();
-        } catch (KeyManagementException e) {
-            return new OkHttpClient.Builder();
-        }
-    }
 
     public APIService getApiService() {
         return apiService;

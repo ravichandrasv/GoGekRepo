@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_top">56dp</dimen>
+    <dimen name="margin_bottom1">16dp</dimen>
+    <dimen name="temp_head_font_size">96sp</dimen>
+    <dimen name="place_size">36sp</dimen>
+    <dimen name="place_margin_bottom">88dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_44">44dp</dimen>
+    <dimen name="text_size_error">54sp</dimen>
+    <dimen name="adapter_margin_44">24dp</dimen>
+    <dimen name="adapter_margin_32">32dp</dimen>
+    <dimen name="text_size_16">16sp</dimen>
+    <dimen name="margin_56">56dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="text_size_96">96sp</dimen>
+    <dimen name="margin_88">88dp</dimen>
+    <dimen name="text_size_36">36sp</dimen>
+</resources>
